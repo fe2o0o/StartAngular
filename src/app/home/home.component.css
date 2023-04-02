@@ -1,0 +1,16 @@
+section{
+  background-color:#1abc9c;
+}
+
+h1
+{
+  font-size: 70px;
+  font-weight: 700;
+  color: white;
+}
+
+.line {
+  width: 100px;
+  height: 3px;
+  background-color: white;
+}

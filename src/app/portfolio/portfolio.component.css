@@ -1,0 +1,66 @@
+.header .line {
+  width: 100px;
+  height: 3px;
+  background-color: #2c3e50;
+}
+
+
+.header i
+{
+  color: #2c3e50;
+}
+
+.container h1{
+  font-size: 48px;
+  color:#2c3e50 ;
+  font-weight: 700;
+}
+
+.overlay
+{
+  background-color: #1abc9cd8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+}
+
+.item
+{
+  max-width: 25rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.item:hover .overlay
+{
+  opacity: 1;
+}
+.overlay i{
+  font-size: 75px;
+  color: white;
+}
+
+.line {
+  width: 100px;
+  height: 3px;
+  background-color: white;
+}
+
+#popUp
+{
+  background-color: #2c3e508a;
+}
+
+#popUp .close
+{
+  top: 15px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+}

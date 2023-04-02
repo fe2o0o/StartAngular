@@ -1,0 +1,27 @@
+section
+{
+  background-color: #1abc9c;
+}
+
+.header h1{
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+}
+
+
+
+.bio
+{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: white;
+}
+
+.line
+{
+  width: 100px;
+  height: 3px;
+  background-color: white;
+}

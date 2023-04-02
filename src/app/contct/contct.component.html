@@ -1,0 +1,58 @@
+<section class="">
+  <div class="container py-5">
+    <div class="header d-flex justify-content-center">
+      <h1>CONTACT ME</h1>
+    </div>
+    <div class="icon  fs-2 text-white py-2 d-flex justify-content-center align-items-center">
+      <span class="line"></span>
+      <i class="fa-solid px-3 fa-star"></i>
+      <span class="line"></span>
+    </div>
+    <form [formGroup]="myForm"  class="content pt-5 mx-auto w-50">
+      <div  class="form-group border-2 border-bottom py-4">
+        <input type="text" formControlName="name" id="name" class="form-control" placeholder="NAME">
+        <div *ngIf="myForm.get('name')?.invalid && (myForm.get('name')?.dirty || myForm.get('name')?.touched)">
+          <div class="alert alert-danger" *ngIf="myForm.get('name')?.errors?.['required'] ">
+            Name is Required
+          </div>
+          <div class="alert alert-danger" *ngIf="myForm.get('name')?.errors?.['minLength'] ">
+            Name is must be at leasr 4 characters long
+          </div>
+          <div class="alert alert-danger" *ngIf="myForm.get('name')?.errors?.['maxLength'] ">
+            Name is must be less than  20 characters
+          </div>
+        </div>
+      </div>
+      <div class="form-group border-2 border-bottom py-4">
+        <input type="email" class="form-control" formControlName="email" placeholder="Email Addres">
+        <div *ngIf="myForm.get('email')?.invalid && (myForm.get('email')?.dirty || myForm.get('email')?.touched)">
+          <div class="alert alert-danger" *ngIf="myForm.get('email')?.errors?.['required'] ">
+            Email is Required
+          </div>
+
+          <div class="alert alert-danger" *ngIf="myForm.get('email')?.errors?.['email'] ">
+            invaild Email format
+          </div>
+        </div>
+      </div>
+      <div class="form-group border-2 border-bottom py-4">
+        <input type="tel" formControlName="phone"  class="form-control" placeholder="Phone Number" >
+        <div *ngIf="myForm.get('phone')?.invalid && (myForm.get('phone')?.dirty || myForm.get('phone')?.touched)">
+          <div class="alert alert-danger" *ngIf="myForm.get('phone')?.errors?.['required'] ">
+            Phone Number is Required
+          </div>
+
+          <div class="alert alert-danger" *ngIf="myForm.get('phone')?.errors?.['pattern'] ">
+            invaild phone Number format
+          </div>
+        </div>
+      </div>
+      <div class="form-group border-2 border-bottom py-4">
+        <textarea name="" id="" placeholder="Message" class="form-control" rows="6"></textarea>
+      </div>
+      <div class="button py-4">
+        <button [disabled]="myForm.invalid"  type="submit" class="btn ">Send</button>
+      </div>
+    </form>
+  </div>
+</section>

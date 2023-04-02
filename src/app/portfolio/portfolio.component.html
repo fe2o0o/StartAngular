@@ -1,0 +1,84 @@
+<section class=" py-5 position-relative">
+  <div class="container py-2">
+    <h1 class="d-flex justify-content-center">PORTFOLIO</h1>
+    <div class="header d-flex py-3 justify-content-center align-items-center ">
+      <span class="line"></span>
+      <i class="fa-solid fa-star px-3 fs-2"></i>
+      <span class="line"></span>
+    </div>
+    <div class="row px-5 g-4 pt-3">
+      <div (click)="getPopHome()" class="col-md-4">
+        <div  class="item">
+          <div class="overlay w-100 h-100 rounded-3 position-absolute">
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <img  class="w-100 rounded-3" src="assets/images/cabin.png" alt="">
+        </div>
+      </div>
+      <div (click)="getPopCake()" class="col-md-4">
+        <div class="item">
+          <div class="overlay w-100 h-100 rounded-3 position-absolute">
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <img class="w-100 rounded-3" src="assets/images/cake.png" alt="">
+        </div>
+      </div>
+      <div (click)="  getCircusPop()" class="col-md-4">
+        <div  class="item">
+          <div class="overlay w-100 h-100 rounded-3 position-absolute">
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <img class="w-100 rounded-3" src="assets/images/circus.png" alt="">
+        </div>
+      </div>
+      <div (click)="getGamePop()" class="col-md-4">
+        <div  class="item">
+          <div class="overlay w-100 h-100 rounded-3 position-absolute">
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <img class="w-100 rounded-3" src="assets/images/game.png" alt="">
+        </div>
+      </div>
+      <div (click)="getSafePop()" class="col-md-4">
+        <div  class="item">
+          <div class="overlay w-100 h-100 rounded-3 position-absolute">
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <img class="w-100 rounded-3" src="assets/images/safe.png" alt="">
+        </div>
+      </div>
+      <div (click)="getSubPop()" class="col-md-4">
+        <div  class="item">
+          <div class="overlay w-100 h-100 rounded-3 position-absolute">
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <img class="w-100 rounded-3" src="assets/images/submarine.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="popUp" class=" py-5 overflow-auto d-none  position-fixed top-0 start-0 end-0 bottom-0">
+    <div class="container w-75 rounded-4 position-relative py-5 bg-white">
+      <i (click)="closePopUp()" class="fa-solid fa-circle-xmark text-danger position-absolute close"></i>
+      <h1 class="d-flex justify-content-center">{{title}}</h1>
+      <div class="header d-flex pt-3 justify-content-center align-items-center">
+        <span class="line"></span>
+        <i class="fa-solid fa-star fs-3 px-3 "></i>
+        <span class="line"></span>
+      </div>
+      <figure class="w-75 d-flex pt-5 mx-auto">
+        <img [src]="imgSrc" class="w-100" alt="">
+      </figure>
+      <figcaption class="w-75 mx-auto text-center">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa a quam voluptate laborum rerum, adipisci repellat voluptates. Quibusdam velit itaque illum consectetur, officiis aliquid unde iure fugiat! Officiis, unde vel.
+        </p>
+      </figcaption>
+      <div class="button py-3 d-flex justify-content-center">
+        <button (click)="closePopUp()" class="btn btn-danger">Close Window</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
